@@ -1,7 +1,5 @@
 from gettyimages/spark:2.3.0-hadoop-2.8 
 
-ADD sources.list /etc/apt/sources.list
-
 RUN apt-get update 
 RUN apt-get install gcc -y && apt-get install python3-dev -y
 
