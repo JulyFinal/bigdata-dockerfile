@@ -6,7 +6,7 @@ ENV HADOOP_COMMON_HOME /opt/hadoop-2.7.1
 ENV HADOOP_MAPRED_HOME /opt/hadoop-2.7.1
 
 WORKDIR /opt
-RUN apt-get update && \
+RUN apt-get update -y && \
   apt-get install -y wget && \
   wget http://mirror.bit.edu.cn/apache/sqoop/1.4.7/sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz && \
   tar -xzvf sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz && \
