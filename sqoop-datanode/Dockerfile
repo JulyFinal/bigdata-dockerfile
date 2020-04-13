@@ -6,12 +6,13 @@ ENV HADOOP_COMMON_HOME /opt/hadoop-2.7.1
 ENV HADOOP_MAPRED_HOME /opt/hadoop-2.7.1
 
 WORKDIR /opt
-RUN echo 'deb http://mirrors.aliyun.com/debian wheezy main contrib non-free
-deb-src http://mirrors.aliyun.com/debian wheezy main contrib non-free
-deb http://mirrors.aliyun.com/debian wheezy-updates main contrib non-free
-deb-src http://mirrors.aliyun.com/debian wheezy-updates main contrib non-free
-deb http://mirrors.aliyun.com/debian-security wheezy/updates main contrib non-free
-deb-src http://mirrors.aliyun.com/debian-security wheezy/updates main contrib non-free' > /etc/apt/sources.list
+
+RUN echo 'deb http://mirrors.aliyun.com/debian wheezy main contrib non-free\n\
+deb-src http://mirrors.aliyun.com/debian wheezy main contrib non-free\n\
+deb http://mirrors.aliyun.com/debian wheezy-updates main contrib non-free\n\
+deb-src http://mirrors.aliyun.com/debian wheezy-updates main contrib non-free\n\
+deb http://mirrors.aliyun.com/debian-security wheezy/updates main contrib non-free\n\
+deb-src http://mirrors.aliyun.com/debian-security wheezy/updates main contrib non-free\n' > /etc/apt/sources.list
 
 RUN rm /var/lib/apt/lists/* -vfr && \
   apt-get update -y && \

@@ -39,7 +39,8 @@ ENV MULTIHOMED_NETWORK=1
 ENV USER=root
 ENV PATH $HADOOP_HOME/bin/:$PATH
 
-ADD entrypoint.sh /entrypoint.sh
+# ADD entrypoint.sh /entrypoint.sh
+RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hadoop-base/entrypoint.sh -O /entrypoint.sh
 
 RUN chmod a+x /entrypoint.sh
 
