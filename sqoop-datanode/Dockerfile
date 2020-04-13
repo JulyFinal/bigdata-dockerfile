@@ -1,4 +1,4 @@
-FROM bde2020/hadoop-datanode:1.1.0-hadoop2.7.1-java8
+FROM finalnarcissus/bigdata:datanode-2.8.0
 
 ENV SQOOP_HOME=/opt/sqoop
 ENV PATH $PATH:${SQOOP_HOME}/bin
@@ -7,7 +7,6 @@ ENV HADOOP_MAPRED_HOME /opt/hadoop-2.7.1
 
 WORKDIR /opt
 
-RUN rm -rf /var/lib/apt/lists/*
 RUN apt-get update -y && \
   apt-get install -y wget && \
   wget http://mirror.bit.edu.cn/apache/sqoop/1.4.7/sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz && \
