@@ -31,13 +31,13 @@ RUN apt-get update && apt-get install -y wget procps && \
 # ADD conf/ivysettings.xml $HIVE_HOME/conf
 # ADD conf/llap-daemon-log4j2.properties $HIVE_HOME/conf
 
-RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/hive-site.xml -O $HIVE_HOME/conf
-RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/beeline-log4j2.properties -O $HIVE_HOME/conf
-RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/hive-env.sh -O $HIVE_HOME/conf
-RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/hive-exec-log4j2.properties -O $HIVE_HOME/conf
-RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/hive-log4j2.properties -O $HIVE_HOME/conf
-RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/ivysettings.xml -O $HIVE_HOME/conf
-RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/llap-daemon-log4j2.properties -O $HIVE_HOME/conf
+RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/hive-site.xml -O $HIVE_HOME/conf/hive-site.xml
+RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/beeline-log4j2.properties -O $HIVE_HOME/conf/beeline-log4j2.properties
+RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/hive-env.sh -O $HIVE_HOME/conf/hive-env.sh
+RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/hive-exec-log4j2.properties -O $HIVE_HOME/conf/hive-exec-log4j2.properties
+RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/hive-log4j2.properties -O $HIVE_HOME/conf/hive-log4j2.properties
+RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/ivysettings.xml -O $HIVE_HOME/conf/ivysettings.xml
+RUN wget https://raw.githubusercontent.com/JulyFinal/bigdata-dockerfile/master/hive-metastore/conf/llap-daemon-log4j2.properties -O $HIVE_HOME/conf/llap-daemon-log4j2.properties
 
 
 # COPY startup.sh /usr/local/bin/
