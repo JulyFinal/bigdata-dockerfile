@@ -1,4 +1,4 @@
-FROM finalnarcissus/bigdata:2.8.0-java8
+FROM finalnarcissus/bigdata:hadoop2.8
 
 HEALTHCHECK CMD curl -f http://localhost:9864/ || exit 1
 

@@ -1,4 +1,4 @@
-FROM finalnarcissus/bigdata:datanode-2.8.0
+FROM finalnarcissus/bigdata:hadoop2.8-datanode
 
 ENV SQOOP_HOME=/opt/sqoop
 ENV PATH $PATH:${SQOOP_HOME}/bin
